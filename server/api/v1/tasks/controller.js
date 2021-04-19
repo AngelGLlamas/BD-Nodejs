@@ -1,19 +1,33 @@
-exports.create = (req, rest, next) => {
-  res.json({});
+exports.create = (req, res, next) => {
+  const { body = {} } = req;
+  res.json(body);
 };
 
-exports.all = (req, rest, next) => {
-  res.json({});
+exports.all = (req, res, next) => {
+  res.json([]);
 };
 
-exports.read = (req, rest, next) => {
-  res.json({});
+exports.read = (req, res, next) => {
+  const { params = {} } = req;
+  const { id } = params;
+  res.json({
+    id,
+  });
 };
 
-exports.update = (req, rest, next) => {
-  res.json({});
+exports.update = (req, res, next) => {
+  const { body = {}, params = {} } = req;
+  const { id } = params;
+  res.json({
+    id,
+    body,
+  });
 };
 
-exports.delete = (req, rest, next) => {
-  res.json({});
+exports.delete = (req, res, next) => {
+  const { params = {} } = req;
+  const { id } = params;
+  res.json({
+    id,
+  });
 };
