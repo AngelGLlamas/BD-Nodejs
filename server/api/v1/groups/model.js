@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const fields = {
   title: {
     type: String,
-    required: true,
+    required: false,
     trim: true,
     maxlength: 128,
   },

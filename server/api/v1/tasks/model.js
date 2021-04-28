@@ -9,10 +9,6 @@ const fields = {
     trim: true,
     maxlength: 128,
   },
-  completed: {
-    type: Boolean,
-    default: false,
-  },
   description: {
     type: String,
     default: '',
@@ -34,7 +30,7 @@ const references = {
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'user',
-    required: true,
+    required: false,
   },
   groupId: {
     type: Schema.Types.ObjectId,
