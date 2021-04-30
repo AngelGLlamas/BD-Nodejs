@@ -26,6 +26,7 @@
     "express-request-id": "^1.4.1",
     "mongoose": "^5.12.5",
     "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
     "strip-final-newline": "^2.0.0",
     "winston": "^3.3.3"
   }
