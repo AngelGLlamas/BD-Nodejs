@@ -1,7 +1,10 @@
+//model construction data
+
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+//model fields
 const fields = {
   title: {
     type: String,

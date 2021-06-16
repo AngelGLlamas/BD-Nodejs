@@ -1,5 +1,6 @@
 require('dotenv').config('');
 
+//configuration Database
 const config = {
   server: {
     port: process.env.SERVER_PORT,

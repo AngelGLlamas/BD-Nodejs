@@ -1,3 +1,5 @@
+//Handling requests to the api
+
 const { Model, fields, references } = require('./model');
 const { paginationParseParams } = require('../../../utils');
 const { sortParseParams, sortCompactToStr } = require('../../../utils');
@@ -25,6 +27,7 @@ exports.id = async (req, res, next, id) => {
   }
 };
 
+//create new element
 exports.create = async (req, res, next) => {
   const { body = {} } = req;
   const document = new Model(body);
@@ -41,6 +44,7 @@ exports.create = async (req, res, next) => {
   }
 };
 
+//view all elements
 exports.all = async (req, res, next) => {
   const { query = {} } = req;
   const { limit, page, skip } = paginationParseParams(query);
@@ -77,6 +81,7 @@ exports.all = async (req, res, next) => {
   }
 };
 
+//read one element
 exports.read = async (req, res, next) => {
   const { doc = {} } = req;
 
@@ -86,6 +91,7 @@ exports.read = async (req, res, next) => {
   });
 };
 
+//update one element
 exports.update = async (req, res, next) => {
   const { body = {}, params = {} } = req;
 
@@ -102,6 +108,7 @@ exports.update = async (req, res, next) => {
   }
 };
 
+//delete element
 exports.delete = async (req, res, next) => {
   const { doc = {} } = req;
 

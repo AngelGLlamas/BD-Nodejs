@@ -1,7 +1,10 @@
+//call to mongoose
+
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+//field requirements
 const fields = {
   title: {
     type: String,
